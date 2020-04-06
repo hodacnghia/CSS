@@ -1,0 +1,62 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  font-size: $default-font-size;
+
+  &__title {
+    font-weight: bold;
+    word-spacing: 0.5px;
+    font-size: 2rem;
+
+
+
+    &::first-letter {
+      color: red;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex: 0.5;
+    justify-content: space-around;
+    align-items: center;
+
+    @include respond(phone) {
+      font-size: 1rem;
+    }
+
+    // background: red;
+    @include respond(tab-land) {
+      flex: 0.7;
+
+    }
+
+    @include respond(tab-port) {
+      flex: 0.7;
+
+    }
+
+    @include respond(phone) {
+      flex: 0.8;
+
+    }
+
+  }
+}
+
+.menu__item {
+  color: gray;
+}
+
+.menu__item:hover {
+  border-bottom: 1px solid red;
+  color: red;
+}
+
+.menu__item--highlight {
+  border: 1px solid red;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+}
